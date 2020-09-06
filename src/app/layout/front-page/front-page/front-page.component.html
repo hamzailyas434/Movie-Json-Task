@@ -1,0 +1,42 @@
+<!-- expected premiere -->
+<section class="section section--bg" data-bg="assets/img/section/section.jpg">
+    <div class="container">
+        <div class="row headr">
+            <!-- section title -->
+            <div class="col-12">
+				<h2 class="section__title">Movie Listings @GV Cinema</h2>
+				<p>
+					<input type="text" (keyup)="onSearchKeyUp()"  [(ngModel)]="search" class="form-control" name="name" placeholder="Search by Name">
+				</p>
+            </div>
+            <!-- end section title -->
+
+			<!-- card -->
+			<div class="col-6 col-sm-4 col-lg-3 col-xl-3" *ngIf="data.length === 0">
+				<p class="clr">
+					No Movie Found
+				</p>
+			</div>
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-3" *ngFor="let c of data ;let i = index">
+                <div class="card">
+                    <div class="card__cover" (click)="movi(i)">
+                        <img src="{{c.imgPath}}" alt="">
+                        <a  class="card__play">
+                            <i class="icon ion-ios-play"></i>
+                        </a>
+                    </div>
+                    <div class="card__content" >
+                        <h3 class="card__title" style="cursor: pointer;"><a (click)="movi(i)">{{c.name}}</a></h3>
+                        <span class="card__category">
+                            <a >{{c.duration}} min</a>
+                        </span>
+                        <span class="card__rate"><i class="icon ion-ios-star"></i>{{c.userRating}}</span>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+</section>
+<!-- end expected premiere -->
+

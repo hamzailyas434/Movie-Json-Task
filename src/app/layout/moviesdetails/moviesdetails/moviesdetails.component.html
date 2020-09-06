@@ -1,0 +1,70 @@
+    <!-- details content -->
+    <section class="section section--bg" data-bg="assets/img/section/section.jpg">
+    <div class="container">
+        <div class="row" >
+            <!-- section title -->
+            <div class="col-12">
+                <h2 class="section__title">Movie Listings @GV Cinema</h2>
+            </div>
+            <!-- end section title -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="clr" type="button" (click) = "backClicked()">Back</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- title -->
+            <div class="col-12">
+                <h1 class="details__title">{{userType.name}}</h1>
+                <p class="title_color">({{userType.mpaaRating.type}} : {{userType.mpaaRating.label}})</p>
+            </div>
+            <!-- end title -->
+
+            <!-- content -->
+            <div class="col-10">
+                <div class="card card--details card--series">
+                    <div class="row">
+                        <!-- card cover -->
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                            <div class="card__cover">
+                                <img src="{{userType.imgPath}}">
+                            </div>
+                        </div>
+                        <!-- end card cover -->
+
+                        <!-- card content -->
+                        <div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-9">
+                            <div class="card__content">
+                                <div class="card__wrap">
+                                    <span class="card__rate"><i class="icon ion-ios-star"></i>{{userType.userRating}}</span>
+
+                                    <ul class="card__list">
+                                        <li>HD</li>
+                                        <li>16+</li>
+                                    </ul>
+                                </div>
+
+                                <ul class="card__meta">
+                                    <h2>Details</h2>
+                                    <li><span>Genre:</span> <a href="#">{{userType.genre}}</a></li>
+                                    <li><span>Release year:</span> {{userType.Release}}</li>
+                                    <li><span>Duration:</span> {{userType.duration}} min</li>
+                                    <li><span>Language:</span> <a href="#">{{userType.language}}</a> </li>
+                                </ul>
+
+                                <div class="card__description card__description--details description">
+                                    <h2>Synopsis</h2>
+                                    <p>{{userType.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card content -->
+                    </div>
+                </div>
+            </div>
+            <!-- end content -->
+        </div>
+    </div>
+</section>

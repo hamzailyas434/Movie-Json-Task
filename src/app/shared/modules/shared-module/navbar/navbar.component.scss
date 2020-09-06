@@ -1,0 +1,19 @@
+.group {
+    display: block;
+    // width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .navbar-nav>.notifications-menu>.dropdown-menu {
+    width: 440px;
+  
+}
+.hr{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+a:hover, a:active, a:focus {
+  outline: none;
+  text-decoration: underline;
+}
